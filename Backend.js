@@ -8,11 +8,12 @@ app.use(express.json());
 app.use(cors()); // Enable CORS globally
 
 // Import routes
-const userAPI = require("../Backend/Router/user");
-const adminAPI = require("../Backend/Router/admin");
-const FavAPI = require("../Backend/Router/favorite");
-const CartAPI = require("../Backend/Router/cart");
+const userAPI = require("./Router/user");
+const adminAPI = require("./Router/admin");
+const FavAPI = require("./Router/favorite");
+const CartAPI = require("./Router/cart");
 const OrderAPI = require("./Router/orders");
+
 
 // Call the connection function
 conn();
