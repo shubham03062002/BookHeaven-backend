@@ -10,6 +10,9 @@ const conn = async () => {
         console.log("Connected to MongoDB");
     } catch (error) {
         console.error("MongoDB Connection Error:", error);
+        if(error.code === 'ESERVFAIL'){
+            console.log("You are not connected to Internet ,internet connection required, please check your network connection and try again")
+        }
         process.exit(1);
     }
 };
